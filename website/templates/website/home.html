@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kudual Systems - Innovative Technologies</title>
+
+    {% load static %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        header {
+            background-color: #0000FF; /* Light blue */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            max-width: 300px;
+        }
+        nav {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFFFFF;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .service {
+            background-color: #F0F0F0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn {
+            background-color: #0000FF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="{% static 'website/js/main.js' %}"></script>
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/kudual_logo.png' %}" alt="Kudual Systems Logo" class="logo">
+        <h1>Kudual Systems</h1>
+        <p>Innovative Technologies</p>
+    </header>
+    <nav>
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'sign_up' %}">Sign Up</a>
+        <a href="{% url 'sign_in' %}">Sign In</a>
+    </nav>
+    <main>
+        <section class="services">
+            <div class="service">
+                <h2>Web Design</h2>
+                <p>Creative and responsive web solutions.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="service">
+                <h2>Networking</h2>
+                <p>Robust networking solutions for businesses.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="service">
+                <h2>Software Development</h2>
+                <p>Custom software tailored to your needs.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="service">
+                <h2>Hardware Sales</h2>
+                <p>High-quality hardware for your operations.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
